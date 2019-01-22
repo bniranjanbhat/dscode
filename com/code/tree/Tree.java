@@ -219,7 +219,41 @@ public class Tree {
 		}
 	}
 
-	
+/*
+ * We first store the nodes of the tree into our array using an inorder traversal. 
+ * When we use the inorder traversal, we will get the sorted tree in the array.
+ * Therefore, they are stored, in order, from smallest to largest. The algorithm continues by
+ * invoking the recursive algorithm InsertTree, passing it the bounds of the array.
+ * If the low and high bounds are the same (base case 1) it simply inserts the corresponding array element into the tree.
+ * If the bounds only differ by one location (base case 2) the algorithm inserts both elements into the tree.
+ * Otherwise, it computes the “middle” element of the subarray, inserts it into the tree, 
+ * and then makes two recursive calls to itself: one to process the elements less than the middle element,
+ *  and one to process the elements greater than the element.
+ */
+	public void balance(){
+		int count = this.reset(INORDER);
+		int treeValues[ ] = new int[count];
+ 		for(int index = 0; index < count; index++)
+ 			treeValues[index] = (int) this.getNextItem(INORDER);
+ 		this.root = null;
+ 		insertTree(treeValues, 0, count-1);
+ 		
+	}
+	private void insertTree(int[] nodes, int low, int high){
+		if (low == high) 
+			this.insert(nodes[low]);
+		else if ((low + 1) == high){
+			this.insert(nodes[low]);
+			this.insert(nodes[high]);
+		}else{
+			int mid = (low + high) / 2;
+			this.insert(nodes[mid]);
+			insertTree(nodes, low,mid - 1);
+			insertTree(nodes, mid + 1, high);
+		}
+			
+	}
+
 	public static void main(String args[]){
 		Tree tree = new Tree();
 		tree.insert(400);
@@ -228,7 +262,8 @@ public class Tree {
 		tree.insert(300);
 		tree.insert(100);
 		System.out.println(tree.numberOfNodes());
-		System.out.println(tree.retreive(300));
+//		System.out.println(tree.retreive(300));
+		tree.balance();
 		
 	}
 }

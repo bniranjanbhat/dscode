@@ -1,0 +1,18 @@
+1. Given a String,the task is to change the string according to the condition,if the first letter in a string is capital letter then change the full
+   string to capital letters,else change the full string to small letters.   
+2. Given a text and a pattern.Find whether the pattern exist in the text or not.if it is present print "found" without quotes else print "not found"
+
+3. Given a String containing 0's and 1's.The task is to find out minimum number of bits to be flipped such that 0's and 1's will be alternative
+4. Given an expression string exp.Examine whether the pairs and the orders of "{","}","(","),"[","]" are correct in exp.
+    For Example the program should print 'balanced' for exp="[()]{}{[()()]()}" and 'not balanced' for exp ="[(])"
+5. Given a string consisting only of A and B.Find the maximum length substring which is repeated exactly twice and is non overlapping.
+
+
+Arrays
+
+1.Remove duplicates from unsorted array?
+2.Count array elements that divide the sum of all other elements?
+3.Count elements in first array but not in second array?
+4.Given an array find the maximum element for all the subarrays of size k?
+5.Count distinct elements in an array?
+    

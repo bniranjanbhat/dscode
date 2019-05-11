@@ -1,0 +1,61 @@
+Strong Reference
+Employee emp = new Employee();
+map.put(emp,new Object());
+emp= null;
+
+
+Employee emp = new Employee();
+SoftReference<Employee> softRef = new SoftReference<Employee>(emp);
+emp = null;
+WeakReference<Employee> weakRef = new WeakReference<Employee>(emp);
+PhantomReference phantomRef = new PhantomReference(emp, queue);
+Employe emp = new Employe();
+// when user logs in
+User user = new User(userid);
+Map<User,DbConnection> weakMap = new WeakHashMap<User,DbConnection>();
+weakMap.put(user,new DbConnection());
+
+Dbconnection db = weakMap.get(user);
+// when the user logs
+user = null;
+
+
+
+Soft Reference
+Weak Refenence
+Phantom Refernce
+
+try{
+
+FileInputStream stream = new File
+MyFileInputStream extends FileInputstream{
+
+
+public void finalize(){
+//
+this.close();
+}
+}
+}
+
+finally{
+
+stream.close();
+}
+
+FIFO
+First In First Out
+
+
+
+LIFO
+Last In First out
+[plate1,plate2,2,3]
+top_of_stack=0
+top_of_stack=1
+stack.push(new Plate("plate1"));
+stack.push(new Plate("plate2"));
+plate2 = stack.pop()
+top_of_stack -- ;
+
+

@@ -2,7 +2,22 @@ package com.code.tree;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
+/*
+ * The binary tree is a tree where each stem has not more than two branches. 
+ * Binary trees are used as data structures to encode logic used to make complex decisions. 
+ * Node is the term used to describe the termination point in a tree. 
+ * There are three kinds of termination points in a tree: 
+ * The starting node: this is also called the root node which is the top level node in the tree. 
+ * The ending node:  
+ * The branch node:
+ * If the node does not have any children then that node is referred to as 'leaf node'.
+ * The binary tree is described by using two measurements: 
+ * Tree Depth: is the number of levels in the tree. A new level is created each time the current node branches into child nodes. 
+ * Tree Size: the size corresponds to the number of nodes in the tree. The size of the tree is estimated using the following formula:
+		Size approximately equal to (2) ^ depth
 
+ */
+		
 public class Tree {
 
 	public static int INORDER = 1;
@@ -17,11 +32,11 @@ public class Tree {
 
 	/*
 	 * Compare the key of item to the key of the (current) root node and then
-	 * call recInsert to insert item into the correct sub- tree—the left subtree
-	 * if item’s key is less than the key of the root node, the right subtree if
-	 * item’s key is greater than the key of the root node.
+	 * call recInsert to insert item into the correct sub- tree
+	 * — the left subtree if item’s key is less than the key of the root node, 
+	 * - the right subtree if item’s key is greater than the key of the root node.
 	 */
-	public void insert(int data) {
+	public void insert(int data) {//15
 		if (root == null) {
 			root = new BSTreeNode(null, null, data);
 		} else {
@@ -31,7 +46,6 @@ public class Tree {
 	}
 
 	private void rec_insert(BSTreeNode node, int data) {
-
 		if (data < node.data) {
 			if (node.left == null) {
 				node.left = new BSTreeNode(null, null, data);
@@ -86,11 +100,12 @@ public class Tree {
 	}
 
 	/*
-	 * There are three cases for deleting a node in BST: 1. Deleting a Leaf: No
-	 * children , deleting a leaf is simply a matter of setting the appropriate
-	 * link of its parent to null. 2. Deleting a node with only one child:make
-	 * the reference from the parent skip over the deleted node and point
-	 * instead to the child of the node we intend to delete 3. Deleting a node
+	 * There are three cases for deleting a node in BST: 
+	 * 1. Deleting a Leaf: No children , deleting a leaf is simply a matter of setting the appropriate
+	 * link of its parent to null. 
+	 * 2. Deleting a node with only one child:make the reference from the parent skip over the deleted node and 
+	 * point instead to the child of the node we intend to delete 
+	 * 3. Deleting a node
 	 * with two children: This is the most complicated case of deletion. In this
 	 * case we do not delete the node but replace its info with the info from
 	 * another node in the tree so that the search property is retained. We then
@@ -152,9 +167,14 @@ public class Tree {
 
 	/*
 	 * Preorder traversal: Visit the root, visit the left subtree, visit the
-	 * right subtree. Inorder traversal: Visit the left subtree, visit the root,
-	 * visit the right subtree. Postorder traversal: Visit the left subtree,
+	 * right subtree. 
+	 * Uses: Preorder traversal is used to create a copy of the tree.
+	 * Inorder traversal: Visit the left subtree, visit the root,
+	 * visit the right subtree. 
+	 * Uses: Inorder traversal of a BST, gives nodes in the ascending order.
+	 * Postorder traversal: Visit the left subtree,
 	 * visit the right subtree, visit the root.
+	 * Uses: Post order traversal is used to delete a tree.
 	 * 
 	 * The reset() api mentioned below would reset the tree and add all the
 	 * elements in the tree into three different queues based on the type of

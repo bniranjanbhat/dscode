@@ -1,4 +1,4 @@
-package com.code.lakshmi.examples;
+package com.code.general.examples;
 
 /*
  * Given a binary string, that is it contains only 0s and 1s. We need to make this string a sequence of alternate characters by

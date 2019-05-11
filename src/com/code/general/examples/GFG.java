@@ -1,4 +1,4 @@
-package com.code.lakshmi.examples;
+package com.code.general.examples;
 //
 //0  1  2  3  4  5  6  7  8  9 10 11 12  13
 //0 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],

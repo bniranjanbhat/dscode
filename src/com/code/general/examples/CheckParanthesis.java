@@ -1,4 +1,4 @@
-package com.code.lakshmi.examples;
+package com.code.general.examples;
 
 import java.net.DatagramSocket;
 import java.util.concurrent.ExecutorService;

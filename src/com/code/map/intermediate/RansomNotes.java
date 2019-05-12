@@ -1,4 +1,4 @@
-package com.code.map;
+package com.code.map.intermediate;
 
 
 import java.util.*;

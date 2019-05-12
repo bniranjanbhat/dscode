@@ -1,6 +1,8 @@
 package com.code.misc;
 
 //Check whether given number is power of 2 or not
+// this solution is handcoded version.
+// we can straight away use the modulus operator
 public class Number_Is_Power_Of_two {
 	public static void main(String[] args) {
 		int[] num = { 2, 4, 6, 8, 10, 12, 16 };

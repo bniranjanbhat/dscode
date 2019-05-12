@@ -3,19 +3,56 @@ package com.code.linkedlist;
 public class ReverseAList {
 	/** * Java Program to reverse a singly list without using recursion. */
 		public static void main(String[] args) {
-			// creating a singly linked// list
+			// begin creating a singlylinkedlist
 			SinglyLinkedList.Node head = new SinglyLinkedList.Node(1);
-			SinglyLinkedList linkedlist = new SinglyLinkedList(head);
-			// // adding node into singly linked list
+			SinglyLinkedList linkedlist = new SinglyLinkedList(head);			
 			linkedlist.add(new SinglyLinkedList.Node(2));
 			linkedlist.add(new SinglyLinkedList.Node(3));
-			// printing a singly linked list
+			
 			linkedlist.print();
-			// reversing the singly linked list
+			// end creating a singlylinkedlist
+			
+			
+			// reversing the singly linked list without recursion.
 			linkedlist.reverse();
+			
+			// this method reverses the linked list recursively
+			reverse(head);
+			
 			// printing the singly linked list again
 			linkedlist.print();
 		}
+		
+		/*
+		 * This function reverses a linked list in a recursive manner.
+		 * Very good video to understand recursion: https://www.youtube.com/watch?v=QqoEmoCsmUg
+		 * 
+		 * original list : 1->2->3
+		 * 
+		 */
+		public static SinglyLinkedList.Node reverse(SinglyLinkedList.Node head) {
+			if (head == null) {
+				return head;
+			}
+
+			// last node or only one node case.
+			if (head.next() == null) {
+				return head;
+			}
+
+			SinglyLinkedList.Node newHeadNode = reverse(head.next());
+
+			
+			// here we are setting the current node as the next node 
+			// 2->3 becomes 3->2
+			head.next().setNext(head);
+			// also we are setting the next of the current node to null.
+			// 2->3 link is set to null so, the list becomes 3->2->null at one stack frame and finally becomes 3->2->1
+			head.setNext(null);
+
+			// send back new head node in every recursion
+			return newHeadNode;
+		} 
 	}
 
 	// /** * A class to represent singly list in Java * * @author WINDOWS 8 * */
@@ -35,6 +72,9 @@ public class ReverseAList {
 
 			public Node next() {
 				return next;
+			}
+			public void setNext(Node n) {
+				this.next = n;
 			}
 		}
 
@@ -93,4 +133,6 @@ public class ReverseAList {
 				head = current;
 			}
 		}
+	  
+	    
 	}

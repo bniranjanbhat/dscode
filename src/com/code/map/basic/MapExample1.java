@@ -1,4 +1,4 @@
-package com.code.map;
+package com.code.map.basic;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,11 +8,9 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
 
-import org.junit.Test;
 
 
 public class MapExample1 {
-	@Test
 	public void test1() {
 		// Does not maintain Insertion order
 		Map<String, String> map = new HashMap<String, String>();

@@ -33,7 +33,6 @@ class ArrayBinarySearch{
 	public static void main(String args[]){
 		
 			ArrayBinarySearch as = new ArrayBinarySearch();
-			;
 			int searchedIndex = as.find(121);
 			System.out.println(searchedIndex);
 		

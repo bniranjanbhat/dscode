@@ -1,4 +1,4 @@
-package com.code.map;
+package com.code.map.basic;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,11 +6,15 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-import org.junit.Test;
 
 public class ListExample1 {
-	@Test
-	// convert array to List
+	/*
+	 * This method shows how to convert an array to a list
+	 * It also uses the ListIterator which is an improvement over Iterator.
+	 * Iterator can traverse the elements in a collection only in forward direction.
+	 * ListIterator can traverse the elements in a collection in forward as well as the backwards direction.
+	 * ListIterator can modify the elements in a collection using set().
+	 */
 	public void test1() {
 		Integer[] arr = new Integer[10];
 		for (int i = 0; i < 10; i++) {
@@ -31,8 +35,6 @@ public class ListExample1 {
 
 	}
 
-	@Test
-	// list to array.
 	public void test2() {
 		List<String> li = new ArrayList<String>();
 		li.add("Hi");

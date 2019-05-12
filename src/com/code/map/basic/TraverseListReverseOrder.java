@@ -1,4 +1,4 @@
-package com.code.map;
+package com.code.map.basic;
 
 import java.util.Iterator;
 import java.util.LinkedList;

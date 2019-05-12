@@ -2,7 +2,12 @@ package com.code.misc;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;
-
+/*
+ * This program takes input from the console as two dates:
+ * d1: DD-MM-YYYY
+ * d2: DD-MM-YYYY
+ * and produces the difference as the number of days taking into consideration the leap year.
+ */
 public class Date_Difference {
 	public static final int NUMBER_DAYS_YEAR = 365;
 
@@ -68,7 +73,12 @@ public class Date_Difference {
 				"Number of days difference between " + to_date + " and " + from_date + " is" + date_diff + " days");
 
 	}
-
+	
+	/*
+	 * Year is a leap year if :
+	 * It is multiple of 400.
+	 * It is multiple of 4 and not multiple of 100.
+	 */
 	public static boolean leap_year(int year) {
 		int year_ = 0;
 

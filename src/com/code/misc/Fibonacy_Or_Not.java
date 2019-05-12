@@ -1,9 +1,13 @@
 package com.code.misc;
 
 import java.util.Scanner;
-
+/*
+ * we have to find if a given number ever occurs in a fibnaci seriees.
+ * All we have to do is start arriving at the fibonacci series and then comparing the 
+ * results at each stage with the number in question.
+ */
 public class Fibonacy_Or_Not {
-	// How To Check If Number Belongs To Fibonacci Series Or Not?
+	
 	public static void main(String[] args) {
 		System.out.println("Enter  Number");
 		Scanner s = new Scanner(System.in);
